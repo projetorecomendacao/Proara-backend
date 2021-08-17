@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'social_django',
     'rest_framework_social_oauth2',
     'corsheaders',    
-    'doafumcadmodel',    
+    'doafumcadmodel',
+    'participante'
 ]
 
 MIDDLEWARE = [
@@ -104,16 +105,27 @@ WSGI_APPLICATION = 'back_doefumcad.wsgi.application'
 #    }
 #}
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.mysql', 
+#        'NAME': 'doadoasanca',
+#        'USER': 'root',
+#        'PASSWORD': 'root',
+#        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+#        'PORT': '3306',
+#    }
+#}
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'doadoasanca',
-        'USER': 'root',
-        'PASSWORD': 'root',
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
-    }
-}
+     'default': {
+         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+         'NAME': 'proara',
+         'USER': 'postgres',
+         'PASSWORD': 'postgres',
+         'HOST': 'localhost',
+         'PORT': '5432',
+     }
+ }
 
 
 # Password validation

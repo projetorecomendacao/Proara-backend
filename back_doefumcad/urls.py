@@ -19,15 +19,35 @@ from django.urls import path, include
 from rest_framework import routers
 
 from back_doefumcad import settings
-from doafumcadmodel.api.views import BoletoViewSet, CidadeViewSet, PatrocinadorViewSet, PessoaViewSet, InstituicaoViewSet
+
+from doafumcadmodel.api.views import CidadeViewSet
+
+from participante.api.viewsets import MaritalStatusViewSet,SchoolingViewSet, \
+     ActivitiesViewSet, ReligionViewSet, EthnicitisViewSet, IncapacitisViewSet, \
+     GenderViewSet, GadgetsViewSet, InternetAccessViewSet, IncomeViewSet, HomeSituationViewSet, \
+     BiggerIncomeViewSet, ParticipantViewSet
+
 
 router = routers.DefaultRouter()
 
-router.register(r'boletos', BoletoViewSet, basename='Boleto')
+
 router.register(r'cidades', CidadeViewSet, basename='Cidade')
-router.register(r'pessoas', PessoaViewSet, basename='Pessoa')
-router.register(r'patrocinadores', PatrocinadorViewSet, basename='Patrocinador')
-router.register(r'instituicoes', InstituicaoViewSet, basename='Instituicao')
+
+
+router.register(r'maritalstatus',MaritalStatusViewSet,basename='MaritalStatus')
+router.register(r'activities',ActivitiesViewSet,basename='Activities')
+router.register(r'schooling',SchoolingViewSet,basename='Schooling')
+router.register(r'religion',ReligionViewSet,basename='Religion')
+router.register(r'ethnicitis',EthnicitisViewSet,basename='Ethnicitis')
+router.register(r'incapacitis',IncapacitisViewSet,basename='Incapacitis')
+router.register(r'genders',GenderViewSet,basename='Genders')
+router.register(r'gadgets',GadgetsViewSet,basename='Gadgets')
+router.register(r'internet',InternetAccessViewSet,basename='InternetAccess')
+router.register(r'income',IncomeViewSet,basename='Income')
+router.register(r'homesituation',HomeSituationViewSet,basename='HomeSituation')
+router.register(r'biggerincome',BiggerIncomeViewSet,basename='BiggerIncome')
+router.register(r'participant',ParticipantViewSet,basename='Participant')
+
 
 
 urlpatterns = [
