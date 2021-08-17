@@ -1,1 +1,1 @@
-web: gunicorn back_proara.wsgi
+web: gunicorn BACK_PROARA.wsgi
