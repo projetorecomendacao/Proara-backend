@@ -1,1 +1,1 @@
-web: gunicorn BACK_PROARA.wsgi
+web: gunicorn back_doefumcad.wsgi
