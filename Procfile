@@ -1,0 +1,1 @@
+web: gunicorn BACK_PROARA.wsgi
